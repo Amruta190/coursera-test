@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    font-size: 1.1em;
+}
+
+body{
+    background-image: linear-gradient(brown,pink);
+}
+
+.container{
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+h1{
+    font-size: 80px;
+    margin: 0 auto 10px;
+    text-shadow: 2px 4px grey;
+}
+.btn-default {
+    margin-bottom: 15px;
+}
+.form-control:focus,
+input[type='text']{
+    width: 30em;
+    margin: 5px;
+    outline: none;
+    border-radius: 20px;
+    padding: 1px 10px;
+    background-color: #C0E5C0;
+}
+
+.message,.red{
+    font-size: 40px;
+    color: red;
+    text-shadow: 2px 2px black;
+}
+.message, .green{
+    font-size: 40px;
+    color: green;
+    text-shadow: 2px 2px black;
+}
+.message, .blue{
+    font-size: 40px;
+    color: blue;
+    text-shadow: 2px 2px black;
+}
+
+.font{
+    font-size: 18px;
+    margin: 15px auto 15px;
+}

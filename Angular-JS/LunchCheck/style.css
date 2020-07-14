@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    font-size: 1.1em;
+}
+
+body{
+    background-image: url(./pexels-photo-616404.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+label{
+    text-align: center;
+    margin: 5px;
+}
+
+.items,
+.items:focus,
+input[type='text']{
+    width: 30em;
+    margin: 5px;
+    outline: none;
+    border-radius: 20px;
+    padding: 1px 10px;
+}
+
+.circle{
+    width: 75px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+}
+
+.red{
+    background-color: orangered;
+    opacity: .25;
+}
+
+.green{
+    background-color: forestgreen;
+    opacity: .25;
+}
+
+.opaque{
+    opacity: .9;
+}

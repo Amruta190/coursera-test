@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styleForIndex.css">
+  </head>
+  <script src="../angular.min.js"></script>
+  <script src="app.js"></script>
+<body ng-controller="lunchCheckController">
+   <div class="container">
+     <h1>Lunch Checker</h1>
+         <div>"List comma separated dishes you usually have for lunch"</div>
+         <div class="font">
+           <b>NOTE :-</b>Empty items are not considered.
+         </div>
+         <div class="form-group">
+             <input id="lunch-menu" type="text" ng-model="name" autofocus 
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checker();">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+           <label class="green">{{StateofBeing_green}}</label>
+           <label class="red">{{StateofBeing_red}}</label>
+           <label class="blue">{{StateofBeing_blue}}</label>
+         </div>
+   </div>
+
+</body>
+</html>
