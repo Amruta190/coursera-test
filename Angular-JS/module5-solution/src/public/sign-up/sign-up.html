@@ -1,0 +1,75 @@
+<div class="container" ng-controller="SignUpController as signUpCtrl">
+    <form name="signUpForm" novalidate class="signUpForm" ng-hide="signUpForm.$submitted && signUpCtrl.saved">
+      <div  class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
+
+          <fieldset>
+            <label for="firstname">First Name</label>
+            <span class="error-msg" ng-if="signUpForm.firstname.$invalid && signUpForm.firstname.$touched">
+              Please enter your first name
+            </span>
+            <input type="text" name="firstname" placeholder="your first name"
+              ng-model="signUpCtrl.user.firstname"
+              required>
+          </fieldset>
+
+          <fieldset>
+            <label for="lastname">Last Name</label>
+            <span class="error-msg" ng-if="signUpForm.lastname.$invalid && signUpForm.lastname.$touched">
+              Please enter your last name
+            </span>
+            <input type="text" name="lastname" placeholder="your last name"
+              ng-model="signUpCtrl.user.lastname"
+              required>
+          </fieldset>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-md-offset-1">
+
+          <fieldset>
+            <label for="email">Email</label>
+            <span class="error-msg" ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+              Please enter a valid email address
+            </span>
+            <input type="email" name="email" placeholder="youremail@example.com"
+              ng-model="signUpCtrl.user.email"
+              required>
+          </fieldset>
+
+          <fieldset>
+            <label for="phone">Phone Number</label>
+            <span class="error-msg" ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+              Please enter a valid phone number
+            </span>
+            <input type="text" name="phone" placeholder="your phone number: ###-###-####"
+              ng-model="signUpCtrl.user.phone"
+              required
+              pattern="(\d{3})-(\d{3})-(\d{4})">
+          </fieldset>
+        </div>
+      </div>
+      <div  class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
+          <fieldset>
+            <label for="favmenuitem">Favourite Dish</label>
+            <span class="error-msg" ng-if="signUpForm.$submitted && !signUpCtrl.saved">
+              Sorry, no such menu number exists
+            </span>
+            <input type="text" name="favmenuitem" placeholder="menu short-name"
+              ng-model="signUpCtrl.user.favmenuitem">
+          </fieldset>
+        </div>
+        <div class="col-xs-12 submit">
+          <button
+            ng-disabled="signUpForm.$invalid"
+            ng-click="signUpCtrl.submit()">Sign up</button>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="row" ng-if="signUpForm.$submitted && signUpCtrl.saved">
+      <div class="col-xs-12">
+        <p class="text-center success">Your information has been saved!</p>
+      </div>
+    </div>
+  </div>

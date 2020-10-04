@@ -1,0 +1,25 @@
+<div class="row">
+<!--
+  <my-info ng-show="myInfoCtrl.saved"
+    firstname="myInfoCtrl.user.firstname"
+    lastname = "myInfoCtrl.user.lastname"
+    email = "myInfoCtrl.user.email"
+    phone = "myInfoCtrl.user.phone"
+    favedish = "myInfoCtrl.menuItem"></my-info> -->
+    <div class="col-xs-12"  ng-show="myInfoCtrl.saved">
+        <h3>My Info</h3>
+        <p>{{$ctrl.firstname}}</p>
+        <p>{{$ctrl.lastname}}</p>
+        <p>{{$ctrl.email}}</p>
+        <p>{{$ctrl.phone}}</p>
+        <div><img scr="{{$ctrl.favedish.name}}"/></div>
+        <p>{{$ctrl.favedish.name}}</p>
+        <p>{{$ctrl.favedish.description}}</p>
+      </div>
+
+  <div class="col-xs-12" ng-hide="myInfoCtrl.saved">
+    <h3 class="text-center">{{myInfoCtrl.user.firstname}}</h3>
+    <h3 class="text-center">Not signed up yet.</h3>
+    <p class="text-center"><a ui-sref="public.signup">Sign up now!</a></p>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.loading-indicator {
+    display: block;
+    width: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 40%;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.loading-indicator img {
+    width: 70px;
+    background-color: #FFF;
+}
+
+.ui-view-placeholder {
+    margin-top: 60px;
+}
+.signUpForm input,
+.signUpForm button {
+  border: none;
+  box-shadow: none;
+  border-radius: 2px;
+}
+
+.signUpForm input {
+  padding: 5px 10px 7px;
+  width: 100%;
+  color: #222;
+}
+.signUpForm button {
+  color: #fff;
+  background-color: #557c3e;
+  width: 250px;
+  padding: 10px 10px 12px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.signUpForm .submit {
+  padding-top: 20px;
+  text-align: center;
+}
+.signUpForm label {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.ng-touched.ng-valid {
+  border: 2px #557c3e solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+.error-msg {
+  display:inline;
+  color: #fff;
+  font-size: 0.8em;
+  font-style: italic;
+  margin-left: 5px;
+}
